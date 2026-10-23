@@ -492,13 +492,21 @@ h2 {
 }
 
 /* Pas de recadrage : hauteur fixe, largeur automatique selon le ratio propre de chaque image */
-.project-carousel__track img {
+.project-carousel__track img,
+.project-carousel__track video {
   flex: 0 0 auto;
   width: auto;
   height: min(420px, 61.5vw);
   aspect-ratio: auto;
   object-fit: contain;
   scroll-snap-align: center;
+}
+
+.project-carousel__track video {
+  width: min(747px, 100%);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  align-self: center;
 }
 
 .project-carousel__btn {
